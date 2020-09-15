@@ -29,11 +29,11 @@ public class Operations
         System.out.println("Quotient: " + div);
         System.out.println("Remainder: " + mod);
 
-        // Round positive number
+        // Here you can round a positive number
         double toRound = 0.55;
         System.out.println("Rounded number: " + (int) (toRound + 0.5));
 
-        // Round negative number
+        // Here you can round a negative number
         toRound = -0.55;
         System.out.println("Rounded number: " + (int) (toRound - 0.5));
     }
