@@ -1,0 +1,52 @@
+package com.company;
+
+public class patient {
+ 
+  private String name;
+  private int room;
+  private boolean alive;
+
+  public Student(String n, int r, boolean a) {
+                name = n;
+                room = r;
+                alive = a;
+            }
+
+  public Student(String n, boolean a) {
+                name = n;
+                alive = g;
+            }
+
+  public void changeRoom(int r) {
+    room = r;
+  }
+
+   public void changeAlive(boolean a) {
+    alive = a;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public double getRoom() {
+    return room;
+  }
+
+  public boolean getAlive() {
+    return alive;
+  }
+
+  public void printOutPatient() {
+    System.out.println("Name:\t" + getName() + "Room #:\t" + getRoom() + "Alive:\t" + getAlive());
+  }
+
+  public static void main(String[] args) {
+                Patient patient1 = new Patient("John", 485, true);
+                student1.printOutStudent();
+
+                Patient patient2 = new Patient("Jessica", False);
+                student2.printOutStudent(String n, boolean a);
+
+            }
+}
