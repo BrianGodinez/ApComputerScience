@@ -1,0 +1,57 @@
+package src.Topic_2;
+
+import java.util.Scanner;
+
+public class StringExplorer {
+ public static void main(String[] args){
+  // String name1 = "Brian";
+   //String name2 = "John";
+   //String name3 = "Brian";
+
+//Scanner input = new Scanner(System.in);
+//System.out.println("Type in a name: ")
+//String name4 = input.nextLine();
+
+
+   //System.out.print("Check whether: " + name1 + " and " + name3 + " are equal: ");
+
+   //System.out.println(name1==name3);
+
+   //System.out.print("Check whether: " + name1 + " and " + name4 + " are equal: ");
+
+   //System.out.println(name1==name4);
+
+ String sampleText = "Teacher: \"you must complete your homework\"";
+ System.out.println(sampleText);
+
+String text2 = "TikTok said it was \"disappointed\" in the order and disagreed with the commerce department, saying it had already committed to \"unprecedented levels of additional transparency\" in light of the Trump administration's concerns.\"We will continue to challenge the unjust executive order, which was enacted without due process and threatens to deprive the American people and small businesses across the US of a significant platform for both a voice and livelihoods.\"The ban order from the Department of Commerce follows President Trump's executive orders signed in August. It gave US businesses 45 days to stop working with either Chinese company.If a planned partnership between US tech firm Oracle and TikTok owner ByteDance is agreed and approved by President Trump, the app will not be banned.It is not yet clear whether Mr Trump will approve the deal, but he is expected to review it before the Sunday deadline.";
+
+
+System.out.println(text2);
+
+int index = text2.indexOf("the");
+System.out.println("index of 'the': " + index);
+
+String subText2 = text2.substring(index);
+System.out.println("Text after substring: \n" + subText2);
+
+String subText3 = text2.substring(20, 30);
+System.out.println("Text after substring: \n" + subText2);
+
+int textLength = text2.length();
+System.out.println("Half of the text: \n" + text2.substring(textLength/2 + 4));
+
+string dem = "Biden";
+string rep = "Trump";
+
+System.out.println("Is the Republican candidate mentioned in this text: ");
+System.out.println(text2.indexOf(rep));
+
+System.out.println("Is the Democratic candidate mentioned in this text: ");
+System.out.println(text2.indexOf(dem));
+
+System.out.println("Is the Republican candidate mentioned more that once: ");
+System.out.println(text2.indexOf(rep, 1000));
+ }
+
+}
