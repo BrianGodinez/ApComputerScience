@@ -1,76 +1,40 @@
-// import java.util.*;
-// import javax.swing.*;
+import java.util.*;
+import javax.swing.*;
 
-// class Main {
-//   public static void main(String[] args) {
-    
-//     string input1 = JOptionPane.showInputDialog("Enter your income: ");
-
-//     string input2 = JOptionPane.showInputDialog("Please enter true if married: ");
-
-//int income = Integer.parseInt(input1);
-//boolean
-
-//     System.out.println("Testing inputs and JOption Pane Class: " + input1 + input2);
-
-//   }
-// }
-
-//JOption test^
-
-//The part above that is commented goes into a folder under the taxReturn class
-
-public class main{
-
-double income;
-boolean status;
-
-private static final double RATE1 = 0.15;
-private static final double RATE2 = 0.25;
-private static final double RATE3 = 0.31;
-
-private static final double SINGLE_BRACKET1 = 21000;
-private static final double SINGLE_BRACKET2 = 51500;
-private static final double SINGLE_BRACKET3 = 71500;
-
-private static final double MARRIED_BRACKET1 = 31500;
-private static final double MARRIED_BRACKET2 = 71500;
-private static final double MARRIED_BRACKET3 = 91500;
+class Main
+{
 
 
-/* creates taxreturn object
-@param anIncome taxpayer's income
-@param status either single or married
-*/
+  public static void main(String[] args)
+  {
+    String input1 = JOptionPane.showInputDialog("Please enter your income: ");
+    String input2 = JOptionPane.showInputDialog("Please enter single or married: ");
+    String input3 = JOptionPane.showInputDialog("Please enter your Social Security Number: ");
 
-public taxReturn(double anIncome, boolean aStatus){
+    int income = Integer.parseInt(input1);
+    int ssn = Integer.parseInt(input3);
 
-income = anIncome;
-status = aStatus;
+    if(income < 0 || income > 100000000)
+    {
+      System.out.println("It looks like you have a bad input");
+      System.exit(0);
+    }
 
-}
+    TaxReturn client1 = new TaxReturn(income, input2, ssn);
 
-public double getTax(){
-  double tax = o;
+    System.out.println(client1.getSSN() + " : \nYou owe: " + client1.getTax());
 
-  if(status){
-if(income <= MARRIED_BRACKET1){
-tax = income*RATE1;
-};
-else if(income <= MARRIED_BRACKET2){
-tax = income*RATE2;
-};
-else if(income <= MARRIED_BRACKET3){
-tax = income*RATE3;
-};
-else if(income <= MARRIED_BRACKET3){
-tax = income*RATE3;
-};
-  }
-  else{
+    TaxReturn client2 = new TaxReturn(100, "single", 300);
+
+    System.out.println(client2.getSSN() + " : \nYou owe: " + client2.getTax());
+
+    boolean sameClient = (client1.equals(client2));
+    System.out.println("Same client as last year? " + sameClient);
+
 
   }
-  return tax;
-}
 
-}
+
+} 
+
+// this is the main tax return class
