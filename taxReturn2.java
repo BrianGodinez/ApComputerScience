@@ -74,7 +74,7 @@ public class TaxReturn
       }
       else if (income <= SINGLE_BRACKET3)
       {
-        tax = RATE1 * SINGLE_BRACKET1 + RATE2 * (income - SINGLE_BRACKET2 - SINGLE_BRACKET1) + RATE3 * (income - SINGLE_BRACKET2);
+        tax = RATE1 * SINGLE_BRACKET1 + RATE2 * (income - SINGLE_BRACKET2 - SINGLE_BRACKET1) + RATE3 * (income - SINGLE_BRACKET2);}
       else if (income <= SINGLE_BRACKET2)
       {
         tax = RATE1 * SINGLE_BRACKET1 + RATE2 * (income - SINGLE_BRACKET1);
